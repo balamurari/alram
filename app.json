@@ -13,13 +13,22 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app needs microphone access to detect your blowing"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#ffffff",
+        "permissions": [
+          "RECORD_AUDIO",
+          "RECORD_AUDIO"
+        ]
+      },
+      "package": "com.balamurari.blow"
     },
     "web": {
       "favicon": "./assets/favicon.png"
